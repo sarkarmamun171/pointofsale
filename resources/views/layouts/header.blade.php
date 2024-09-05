@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>ProUI - Responsive Bootstrap Admin Template</title>
+    <title>POS-Admin</title>
 
     <meta name="description"
         content="ProUI is a Responsive Bootstrap Admin Template created by pixelcave and published on Themeforest.">
