@@ -16,8 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts');
 });
-Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
-//User Information
-Route::get('/user',[UserController::class,'user_info'])->name('user.info');
+
