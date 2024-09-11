@@ -24,6 +24,7 @@ Route::get('/',[FrontendController::class,'dashboard'])->name('dashborad');
 Route::get('/index',[FrontendController::class,'index'])->name('index');
 Route::get('/add-category',[CategoryController::class,'add_category'])->name('add.category');
 Route::post('/category-store',[CategoryController::class,'category_store'])->name('category.store');
+Route::get('/category-edit/{id}',[CategoryController::class,'category_edit'])->name('category.edit');
 
 
 

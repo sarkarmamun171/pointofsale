@@ -9,7 +9,7 @@
       href="{{ asset('backend') }}/assets/images/favicon.svg"
       type="image/x-icon"
     />
-    <title>PlainAdmin Demo | Bootstrap 5 Admin Template</title>
+    <title>POS Demo</title>
 
     <!-- ========== All CSS files linkup ========= -->
     <link rel="stylesheet" href="{{ asset('backend') }}/assets/css/bootstrap.min.css" />
