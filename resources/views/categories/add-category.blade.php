@@ -22,7 +22,7 @@
                                 </td>
                                 <td>
                                     <div class="d-flex">
-                                        <a href="{{ route('category.edit') }}" class="btn btn-info shadow btn-xs sharp del_btn"><i class="fa-solid fa-pencil"></i></a>
+                                        <a href="{{ route('category.edit',$category->id) }}" class="btn btn-info shadow btn-xs sharp del_btn"><i class="fa-solid fa-pencil"></i></a>
                                         &nbsp; &nbsp;
                                         <a href="#" class="btn btn-danger shadow btn-xs sharp del_btn"><i
                                                 class="fa fa-trash"></i></a>

@@ -36,8 +36,34 @@ class CategoryController extends Controller
             ]);
             return back()->with('cate_add','Category Added');
     }
-    public function category_edit($id){
-        
-        return view('categories.edit-category');
+    public function category_edit($category_id){
+        $category_info = Category::find($category_id);
+        return view('categories.edit-category',[
+            'category_info'=>$category_info,
+        ]);
+    }
+    public function category_update(Request $request){
+        $category = Category::find($request->category_id);
+        if ($request->category_image=='') {
+          Category::find($request->category_id)->update([
+            'category_name'=>$request->category_name,
+            'created_at'=>Carbon::now(),
+          ]);
+        }
+        else{
+            $curret_img = public_path('uploads/category/'.$category->category_img);
+            unlink($curret_img);
+
+            $img = $request->category_image;
+            $extension = $img->extension();
+            $file_name =Str::lower(str_replace('','-',$request->category_name))."-".random_int(100,100000).".".$extension;
+            Image::make($img)->save(public_path('uploads/category/'.$file_name));
+
+            Category::find($request->category_id)->update([
+                'category_image'=>$file_name,
+                'updated_at'=>Carbon::now(),
+            ]);
+            return back()->with('success','Category Updated');
+        }
     }
 }
